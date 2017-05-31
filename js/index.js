@@ -586,7 +586,7 @@ $(function(){
     let tushu=$('.tushu');
     let tsleft=$('.tsleft',neirong)[0];
     let tsright=$('.tsright',neirong)[0];
-    let lefts=0,s=0;
+    let lefts=0,s=0,ss=0;
 
     neirong.onmouseenter=function(){
         tsleft.style.opacity=1;
@@ -599,23 +599,21 @@ $(function(){
 
 
     tsright.onclick=function(){
-        lefts+=295.5;
-        if (lefts>=886.5) {
-            lefts=886.5;
+        ss++;
+        if (ss>=4) {
+            ss=3;
         }
-        tushubox.style.left=-lefts+'px';
-        let ss=lefts/295.5;
+        tushubox.style.left=-ss*295.5+'px';
         lis[s].className='dian1';
         lis[ss].className='dian';
         s=ss;
     }
     tsleft.onclick=function(){
-        lefts-=295.5;
-        if (lefts<=0) {
-            lefts=0;
+        ss--;
+        if (ss<=0) {
+            ss=0;
         }
-        tushubox.style.left=-lefts+'px';
-        let ss=lefts/295.5;
+        tushubox.style.left=-ss*295.5+'px';
         lis[s].className='dian1';
         lis[ss].className='dian';
         s=ss;
@@ -627,6 +625,7 @@ $(function(){
             }
             lis[i].className='dian';
             tushubox.style.left=i*-295.5+'px';
+            s=ss=i;
         }
     }
 })
@@ -639,7 +638,7 @@ $(function(){
     let tushu=$('.tushu');
     let tsleft=$('.tsleft',neirong)[0];
     let tsright=$('.tsright',neirong)[0];
-    let lefts=0,s=0;
+    let lefts=0,s=0,ss=0;
 
     neirong.onmouseenter=function(){
         tsleft.style.opacity=1;
@@ -652,23 +651,21 @@ $(function(){
 
 
     tsright.onclick=function(){
-        lefts+=295.5;
-        if (lefts>=886.5) {
-            lefts=886.5;
+        ss++;
+        if (ss>=4) {
+            ss=3;
         }
-        tushubox.style.left=-lefts+'px';
-        let ss=lefts/295.5;
+        tushubox.style.left=-ss*295.5+'px';
         lis[s].className='dian1';
         lis[ss].className='dian';
         s=ss;
     }
     tsleft.onclick=function(){
-        lefts-=295.5;
-        if (lefts<=0) {
-            lefts=0;
+        ss--;
+        if (ss<=0) {
+            ss=0;
         }
-        tushubox.style.left=-lefts+'px';
-        let ss=lefts/295.5;
+        tushubox.style.left=-ss*295.5+'px';
         lis[s].className='dian1';
         lis[ss].className='dian';
         s=ss;
@@ -680,6 +677,7 @@ $(function(){
             }
             lis[i].className='dian';
             tushubox.style.left=i*-295.5+'px';
+            s=ss=i;
         }
     }
 })
